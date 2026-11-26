@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contoh Jawaban Post-test Form B – Krulik dan Rudnick</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] },
+  chtml: { scale: 1.0 }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+<style>
+:root {
+  --ink: #1f2937;
+  --muted: #5b6472;
+  --line: #d8dee8;
+  --soft: #f4f6f9;
+  --accent: #244a70;
+  --accent-soft: #eaf1f8;
+  --simple: #f7f4ec;
+  --complete: #edf5f0;
+}
+* { box-sizing: border-box; }
+html { background: #eef1f5; }
+body {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 28px 32px 56px;
+  color: var(--ink);
+  background: #fff;
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.56;
+}
+h1, h2, h3, h4 { line-height: 1.25; color: #172536; }
+h1 { font-size: 27px; margin: 0 0 8px; letter-spacing: -.25px; }
+h2 { font-size: 21px; margin: 0 0 14px; }
+h3 { font-size: 17px; margin: 0 0 10px; }
+h4 { font-size: 14px; margin: 0 0 5px; }
+p { margin: 7px 0 10px; }
+ul { margin: 5px 0 10px; padding-left: 22px; }
+li { margin: 2px 0; }
+.subtitle { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+.lead {
+  padding: 15px 17px;
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  border-radius: 5px;
+  margin: 18px 0 22px;
+}
+.meta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0 24px; }
+.meta {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 11px 13px;
+}
+.meta strong { display: block; font-size: 14px; }
+.meta span { color: var(--muted); font-size: 13px; }
+.student {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin: 25px 0 32px;
+  overflow: hidden;
+  page-break-before: always;
+  break-before: page;
+}
+.student:first-of-type { page-break-before: auto; break-before: auto; }
+.student-head { padding: 16px 19px 13px; background: var(--soft); border-bottom: 1px solid var(--line); }
+.student-head .tag { display: inline-block; padding: 3px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .4px; margin-bottom: 7px; }
+.tag.simple { background: #eee6d3; color: #624c20; }
+.tag.complete { background: #dcece2; color: #24563a; }
+.student-head h2 { margin: 0; }
+.student-head p { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+.student-body { padding: 17px 19px 19px; }
+.question { margin: 0 0 22px; padding-bottom: 17px; border-bottom: 1px solid var(--line); }
+.question:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.question h3 { color: var(--accent); }
+.response {
+  background: #fbfcfd;
+  border: 1px solid #e4e9ef;
+  border-radius: 7px;
+  padding: 12px 14px;
+}
+.response p:last-child { margin-bottom: 0; }
+.stage-list { display: grid; gap: 9px; }
+.stage {
+  border-left: 3px solid #9aabba;
+  padding: 8px 11px;
+  background: #fbfcfd;
+  border-radius: 0 5px 5px 0;
+}
+.stage .stage-name { color: var(--accent); font-weight: 700; font-size: 13px; display: block; margin-bottom: 2px; }
+.stage p { margin: 2px 0; }
+.calc { margin: 8px 0; padding: 8px 10px; background: #f3f6fa; border-radius: 5px; overflow-x: auto; }
+.marker { color: var(--muted); font-size: 12px; margin-top: 9px; }
+.key-table, .summary-table { width: 100%; border-collapse: collapse; margin: 12px 0 17px; font-size: 13px; }
+th, td { border: 1px solid var(--line); padding: 8px 9px; vertical-align: top; text-align: left; }
+th { background: var(--soft); }
+.note { padding: 12px 14px; border-radius: 6px; background: var(--simple); border: 1px solid #e9dfc8; margin: 14px 0; }
+.note.green { background: var(--complete); border-color: #d3e5d9; }
+.footer-note { border-top: 1px solid var(--line); padding-top: 14px; color: var(--muted); font-size: 12px; margin-top: 30px; }
+.small { color: var(--muted); font-size: 13px; }
+strong { font-weight: 700; }
+@media (max-width: 650px) {
+  body { padding: 18px 14px 38px; }
+  .meta-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 23px; }
+  .student-body { padding: 13px; }
+}
+@media print {
+  @page { size: A4; margin: 16mm 15mm 17mm; }
+  html, body { background: #fff; max-width: none; padding: 0; }
+  body { font-size: 11pt; line-height: 1.48; }
+  .student { border: 0; border-radius: 0; overflow: visible; margin: 0; page-break-before: always; break-before: page; }
+  .student:first-of-type { page-break-before: auto; break-before: auto; }
+  .student-head { padding: 10px 12px; }
+  .student-body { padding: 12px 0; }
+  .question { margin-bottom: 15px; padding-bottom: 12px; }
+  .stage-list { gap: 6px; }
+  .stage { padding: 6px 9px; break-inside: avoid; }
+  .response, .note, .meta, .calc { break-inside: avoid; }
+  .meta-grid { gap: 6px; }
+  h1 { font-size: 21pt; }
+  h2 { font-size: 16pt; }
+  h3 { font-size: 13pt; }
+  p { margin: 5px 0 7px; }
+  .footer-note { margin-top: 16px; }
+}
+</style>
+</head>
+<body>
+
+<section class="student">
+  <div class="student-body">
+    <article class="question">
+      <h3>Soal 1 — Penyusunan Kotak dalam Bak Pengangkut</h3>
+      <div class="stage-list">
+        <div class="stage"><span class="stage-name">1. Read and Think — Membaca dan Memahami</span><p>Diketahui jumlah kotak yang akan dikirim adalah 25. Ukuran setiap kotak adalah 25 cm × 20 cm × 10 cm, sedangkan ukuran bagian dalam bak adalah 100 cm × 60 cm × 25 cm. Kotak tidak boleh diputar. Ditanyakan apakah semua kotak dapat dimuat dan berapa jumlah maksimalnya.</p></div>
+        <div class="stage"><span class="stage-name">2. Explore and Plan — Mengeksplorasi dan Merencanakan</span><p>Susunan dihitung pada tiga arah. Banyak kotak pada arah panjang diperoleh dari panjang bak dibagi panjang kotak. Cara yang sama digunakan untuk arah lebar dan tinggi. Karena kotak harus utuh, hasil pembagian diambil sebanyak mungkin tanpa melebihi ukuran bak.</p></div>
+        <div class="stage"><span class="stage-name">3. Select a Strategy — Memilih Strategi</span><p>Saya akan menghitung banyak kotak pada setiap arah, kemudian mengalikan ketiga hasilnya untuk memperoleh kapasitas bak.</p></div>
+        <div class="stage"><span class="stage-name">4. Find an Answer — Menemukan Jawaban</span>
+          <div class="calc">\[\begin{aligned}
+          n_p&=100\div25=4\\
+          n_l&=60\div20=3\\
+          25&=2\times10+5\quad(2\text{ lapis, sisa }5\text{ cm})\\
+          N&=4\times3\times2=24\text{ kotak}
+          \end{aligned}\]</div>
+          <p>Jadi, kapasitas maksimal bak adalah 24 kotak.</p>
+        </div>
+        <div class="stage"><span class="stage-name">5. Reflect and Extend — Meninjau Kembali dan Mengembangkan</span><p>Hasil 24 lebih kecil daripada 25, sehingga seluruh kotak tidak dapat dimuat. Pada arah tinggi, dua lapis memakai 20 cm dan masih menyisakan 5 cm. Sisa tersebut tidak cukup untuk satu kotak lagi yang tingginya 10 cm. Jadi hasil 24 kotak masuk akal dan tidak ada lapisan tambahan yang dapat dibuat.</p></div>
+      </div>
+    </article>
+
+    <article class="question">
+      <h3>Soal 2 — Pemilihan Bentuk Kemasan Berbentuk Limas</h3>
+      <div class="stage-list">
+        <div class="stage"><span class="stage-name">1. Read and Think — Membaca dan Memahami</span><p>Model A mempunyai alas persegi dengan sisi 10 cm dan tinggi limas 18 cm. Model B mempunyai alas segitiga dengan alas 20 cm, tinggi segitiga 9 cm, dan tinggi limas 18 cm. Ditanyakan volume masing-masing model dan model dengan volume lebih besar.</p></div>
+        <div class="stage"><span class="stage-name">2. Explore and Plan — Mengeksplorasi dan Merencanakan</span><p>Kedua bangun merupakan limas, sehingga volume masing-masing adalah sepertiga luas alas dikalikan tinggi limas. Luas alas harus dihitung sesuai bentuknya: persegi untuk Model A dan segitiga untuk Model B.</p></div>
+        <div class="stage"><span class="stage-name">3. Select a Strategy — Memilih Strategi</span><p>Hitung luas kedua alas terlebih dahulu. Setelah itu gunakan rumus \(V=\frac13 A\times t\), kemudian bandingkan kedua volume.</p></div>
+        <div class="stage"><span class="stage-name">4. Find an Answer — Menemukan Jawaban</span>
+          <p>Model A:</p><div class="calc">\[A_A=10\times10=100\text{ cm}^2\]
+          \[V_A=\frac13\times100\times18=600\text{ cm}^3\]</div>
+          <p>Model B:</p><div class="calc">\[A_B=\frac12\times20\times9=90\text{ cm}^2\]
+          \[V_B=\frac13\times90\times18=540\text{ cm}^3\]</div>
+        </div>
+        <div class="stage"><span class="stage-name">5. Reflect and Extend — Meninjau Kembali dan Mengembangkan</span><p>Volume Model A lebih besar, yaitu 600 cm³, sedangkan Model B 540 cm³. Selisihnya 60 cm³. Karena tinggi kedua limas sama, hasil ini juga sesuai dengan luas alas Model A yang lebih besar daripada luas alas Model B. Jadi Model A dipilih.</p></div>
+      </div>
+    </article>
+
+    <article class="question">
+      <h3>Soal 3 — Perancangan Tangki Air Berbentuk Gabungan</h3>
+      <div class="stage-list">
+        <div class="stage"><span class="stage-name">1. Read and Think — Membaca dan Memahami</span><p>Tangki terdiri atas balok berukuran 5 m × 4 m × 2 m dan prisma segitiga dengan panjang 5 m serta alas segitiga 4 m dan tinggi segitiga 1 m. Kedua bagian terhubung tanpa sekat. Kapasitas minimum yang dibutuhkan adalah 46 m³. Ditanyakan apakah kapasitas tangki memenuhi kebutuhan tersebut.</p></div>
+        <div class="stage"><span class="stage-name">2. Explore and Plan — Mengeksplorasi dan Merencanakan</span><p>Volume tangki diperoleh dengan menjumlahkan volume bagian balok dan prisma segitiga. Untuk prisma, luas alas segitiga dihitung lebih dahulu, kemudian dikalikan dengan tinggi prisma.</p></div>
+        <div class="stage"><span class="stage-name">3. Select a Strategy — Memilih Strategi</span><p>Gunakan rumus volume balok \(V=p\times l\times t\). Untuk bagian prisma, gunakan \(V=A_{\text{alas}}\times t_{\text{prisma}}\), dengan luas alas segitiga \(A=\frac12\times a\times t_a\). Setelah kedua volume diperoleh, jumlahkan dan bandingkan dengan 46 m³.</p></div>
+        <div class="stage"><span class="stage-name">4. Find an Answer — Menemukan Jawaban</span>
+          <p>Volume bagian bawah berbentuk balok:</p><div class="calc">\[V_{\text{balok}}=5\times4\times2=40\text{ m}^3\]</div>
+          <p>Luas alas segitiga pada bagian atas:</p><div class="calc">\[A_{\text{segitiga}}=\frac12\times4\times1=2\text{ m}^2\]</div>
+          <p>Volume bagian atas berbentuk prisma segitiga:</p><div class="calc">\[V_{\text{prisma}}=2\times5=10\text{ m}^3\]</div>
+          <p>Volume seluruh tangki:</p><div class="calc">\[V_{\text{total}}=40+10=50\text{ m}^3\]</div>
+        </div>
+        <div class="stage"><span class="stage-name">5. Reflect and Extend — Meninjau Kembali dan Mengembangkan</span><p>Kapasitas tangki adalah 50 m³ dan kebutuhan balai desa 46 m³. Karena \(50\geq46\), tangki memenuhi kebutuhan. Selisihnya adalah \(50-46=4\text{ m}^3\). Penjumlahan dilakukan karena kedua bagian terhubung tanpa sekat, sehingga seluruh ruang dapat diisi air.</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+______________________________________________________________________________________________________________________________________________________________
+    <article class="question">
+      <h3>Soal 1 — Penyusunan Kotak dalam Bak Pengangkut</h3>
+      <div class="response">
+        <p><strong>Diketahui:</strong></p>
+        <ul>
+          <li>Jumlah kotak yang akan dikirim = 25 kotak.</li>
+          <li>Ukuran satu kotak = 25 cm × 20 cm × 10 cm.</li>
+          <li>Ukuran bagian dalam bak = 100 cm × 60 cm × 25 cm.</li>
+          <li>Kotak disusun tanpa diputar.</li>
+        </ul>
+        <p><strong>Ditanya:</strong> Apakah seluruh 25 kotak dapat dimuat? Berapa jumlah maksimal kotak yang dapat dimuat?</p>
+        <p><strong>Jawab:</strong></p>
+        <p>Kotak disusun mengikuti ukuran bak pada arah panjang, lebar, dan tinggi. Banyak kotak pada setiap arah dihitung dengan membagi ukuran bak dengan ukuran kotak yang bersesuaian. Karena kotak harus utuh, banyaknya kotak pada setiap arah tidak boleh melebihi hasil pembagian.</p>
+        <div class="calc">\[\begin{aligned}
+          \text{Arah panjang: }&100\div25=4\text{ kotak}\\
+          \text{Arah lebar: }&60\div20=3\text{ kotak}\\
+          \text{Arah tinggi: }&25\div10=2\text{ lapis penuh}
+        \end{aligned}\]</div>
+        <p>Dalam satu lapisan terdapat:</p>
+        <div class="calc">\[4\times3=12\text{ kotak}\]</div>
+        <p>Karena dapat disusun 2 lapis, jumlah maksimal kotak adalah:</p>
+        <div class="calc">\[12\times2=24\text{ kotak}\]</div>
+        <p><strong>Kesimpulan:</strong> Bak pengangkut dapat memuat maksimal 24 kotak. Jadi, seluruh 25 kotak tidak dapat dimuat. Setelah dua lapis disusun, tinggi yang terpakai adalah 20 cm dan tersisa 5 cm. Sisa tersebut tidak cukup untuk menambah satu lapis lagi karena tinggi satu kotak adalah 10 cm.</p>
+      </div>
+    </article>
+
+    <article class="question">
+      <h3>Soal 2 — Pemilihan Bentuk Kemasan Berbentuk Limas</h3>
+      <div class="response">
+        <p><strong>Diketahui:</strong></p>
+        <ul>
+          <li>Model A: alas persegi dengan panjang sisi 10 cm dan tinggi limas 18 cm.</li>
+          <li>Model B: alas segitiga dengan panjang alas 20 cm, tinggi segitiga 9 cm, dan tinggi limas 18 cm.</li>
+        </ul>
+        <p><strong>Ditanya:</strong> Berapa volume masing-masing model dan model mana yang memiliki volume lebih besar?</p>
+        <p><strong>Jawab:</strong></p>
+        <p>Kedua kemasan berbentuk limas, sehingga volumenya dihitung dengan rumus sepertiga luas alas dikalikan tinggi limas. Luas alas masing-masing model dihitung sesuai bentuknya.</p>
+        <p>Model A — luas alas persegi:</p>
+        <div class="calc">\[A_A=10\times10=100\text{ cm}^2\]</div>
+        <p>Volume Model A:</p>
+        <div class="calc">\[V_A=\frac13\times100\times18=600\text{ cm}^3\]</div>
+        <p>Model B — luas alas segitiga:</p>
+        <div class="calc">\[A_B=\frac12\times20\times9=90\text{ cm}^2\]</div>
+        <p>Volume Model B:</p>
+        <div class="calc">\[V_B=\frac13\times90\times18=540\text{ cm}^3\]</div>
+        <p>Perbandingan volumenya:</p>
+        <div class="calc">\[600-540=60\text{ cm}^3\]</div>
+        <p><strong>Kesimpulan:</strong> Model A memiliki volume lebih besar, yaitu 600 cm³, sedangkan Model B memiliki volume 540 cm³. Dengan demikian, Model A dapat menampung produk dengan volume 60 cm³ lebih banyak.</p>
+      </div>
+    </article>
+
+    <article class="question">
+      <h3>Soal 3 — Perancangan Tangki Air Berbentuk Gabungan</h3>
+      <div class="response">
+        <p><strong>Diketahui:</strong></p>
+        <ul>
+          <li>Bagian bawah berbentuk balok: panjang 5 m, lebar 4 m, dan tinggi 2 m.</li>
+          <li>Bagian atas berbentuk prisma segitiga: panjang prisma 5 m, alas segitiga 4 m, dan tinggi segitiga 1 m.</li>
+          <li>Kedua bagian terhubung tanpa sekat.</li>
+          <li>Kapasitas minimum yang dibutuhkan = 46 m³.</li>
+        </ul>
+        <p><strong>Ditanya:</strong> Apakah tangki tersebut dapat memenuhi kebutuhan kapasitas air?</p>
+        <p><strong>Jawab:</strong></p>
+        <p>Volume tangki dihitung dengan menjumlahkan volume bagian balok dan bagian prisma segitiga karena kedua bagian terhubung tanpa sekat.</p>
+        <p>Volume bagian bawah (balok):</p>
+        <div class="calc">\[V_{\text{balok}}=5\times4\times2=40\text{ m}^3\]</div>
+        <p>Luas alas segitiga pada bagian atas:</p>
+        <div class="calc">\[A_{\text{segitiga}}=\frac12\times4\times1=2\text{ m}^2\]</div>
+        <p>Volume bagian atas (prisma segitiga):</p>
+        <div class="calc">\[V_{\text{prisma}}=2\times5=10\text{ m}^3\]</div>
+        <p>Volume keseluruhan tangki:</p>
+        <div class="calc">\[V_{\text{total}}=40+10=50\text{ m}^3\]</div>
+        <p>Kapasitas tangki dibandingkan dengan kebutuhan:</p>
+        <div class="calc">\[50-46=4\text{ m}^3\]</div>
+        <p><strong>Kesimpulan:</strong> Tangki dapat memenuhi kebutuhan karena kapasitas keseluruhannya 50 m³, lebih besar daripada kebutuhan minimum 46 m³. Tangki memiliki kelebihan kapasitas sebesar 4 m³.</p>
+      </div>
+    </article>
+  </div>
+</section>
+  <div class="student-body">
+    <article class="question">
+      <h3>Soal 1 — Penyusunan Kotak dalam Bak Pengangkut</h3>
+      <div class="stage-list">
+        <div class="stage"><span class="stage-name">1. Read and Think — Membaca dan Memahami</span><p>Jumlah kotak = 25. Ukuran kotak = 25 cm × 20 cm × 10 cm. Ukuran bak bagian dalam = 100 cm × 60 cm × 25 cm. Penempatan ukuran tidak boleh diubah. Saya harus menentukan kapasitas susunan dan membandingkannya dengan 25 kotak.</p></div>
+        <div class="stage"><span class="stage-name">2. Explore and Plan — Mengeksplorasi dan Merencanakan</span><p>Karena posisi kotak tetap, saya menghitung banyaknya kotak yang muat pada panjang, lebar, dan tinggi secara terpisah. Sisa ukuran bak yang kurang dari satu ukuran kotak tidak dapat digunakan untuk menambah kotak utuh.</p></div>
+        <div class="stage"><span class="stage-name">3. Select a Strategy — Memilih Strategi</span><p>Gunakan pembagian untuk mendapatkan banyak kotak pada tiap arah. Hasil pembagian dibulatkan ke bawah jika ada sisa, kemudian ketiganya dikalikan.</p></div>
+        <div class="stage"><span class="stage-name">4. Find an Answer — Menemukan Jawaban</span>
+          <table class="key-table">
+            <thead><tr><th>Arah susunan</th><th>Perhitungan</th><th>Banyak kotak</th></tr></thead>
+            <tbody>
+              <tr><td>Panjang</td><td>\(100\div25\)</td><td>4</td></tr>
+              <tr><td>Lebar</td><td>\(60\div20\)</td><td>3</td></tr>
+              <tr><td>Tinggi</td><td>\(25\div10\), hanya 2 lapis penuh</td><td>2</td></tr>
+            </tbody>
+          </table>
+          <div class="calc">\[N=4\times3\times2=24\text{ kotak}\]</div>
+        </div>
+        <div class="stage"><span class="stage-name">5. Reflect and Extend — Meninjau Kembali dan Mengembangkan</span><p>Kapasitas 24 kotak berarti masih kurang satu tempat untuk seluruh kiriman. Jika disusun dua lapis, tinggi yang dipakai adalah 20 cm dan sisa 5 cm. Karena tinggi satu kotak 10 cm, sisa tersebut tidak dapat dipakai untuk lapisan ketiga. Jadi jawaban maksimal 24 kotak sudah sesuai dengan ukuran bak.</p></div>
+      </div>
+    </article>
+
+    <article class="question">
+      <h3>Soal 2 — Pemilihan Bentuk Kemasan Berbentuk Limas</h3>
+      <div class="stage-list">
+        <div class="stage"><span class="stage-name">1. Read and Think — Membaca dan Memahami</span><p>Model A adalah limas beralas persegi dengan sisi 10 cm dan tinggi 18 cm. Model B adalah limas beralas segitiga dengan alas 20 cm, tinggi segitiga 9 cm, dan tinggi limas 18 cm. Saya diminta menentukan volume kedua model dan memilih yang volumenya lebih besar.</p></div>
+        <div class="stage"><span class="stage-name">2. Explore and Plan — Mengeksplorasi dan Merencanakan</span><p>Volume limas bergantung pada luas alas dan tinggi limas. Tinggi kedua model sama, tetapi luas alasnya berbeda. Saya harus memastikan bahwa tinggi segitiga pada Model B dipakai untuk menghitung luas alas, bukan sebagai tinggi limas.</p></div>
+        <div class="stage"><span class="stage-name">3. Select a Strategy — Memilih Strategi</span><p>Hitung luas persegi dan segitiga terlebih dahulu. Setelah itu masukkan luas alas dan tinggi limas ke rumus \(V=\frac13 A_{\text{alas}}t\).</p></div>
+        <div class="stage"><span class="stage-name">4. Find an Answer — Menemukan Jawaban</span>
+          <p>Model A:</p><div class="calc">\[A_A=10^2=100\text{ cm}^2\]
+          \[V_A=\frac13\times100\times18=600\text{ cm}^3\]</div>
+          <p>Model B:</p><div class="calc">\[A_B=\frac12\times20\times9=90\text{ cm}^2\]
+          \[V_B=\frac13\times90\times18=540\text{ cm}^3\]</div>
+        </div>
+        <div class="stage"><span class="stage-name">5. Reflect and Extend — Meninjau Kembali dan Mengembangkan</span><p>Model A mempunyai volume 600 cm³, sedangkan Model B 540 cm³. Selisihnya 60 cm³. Saya memeriksa kembali bahwa luas alas A memang 100 cm² dan luas alas B 90 cm². Karena tingginya sama, Model A seharusnya mempunyai volume lebih besar. Hasil perhitungan sesuai, sehingga Model A dipilih.</p></div>
+      </div>
+    </article>
+
+    <article class="question">
+      <h3>Soal 3 — Perancangan Tangki Air Berbentuk Gabungan</h3>
+      <div class="stage-list">
+        <div class="stage"><span class="stage-name">1. Read and Think — Membaca dan Memahami</span><p>Bagian bawah tangki adalah balok dengan ukuran 5 m × 4 m × 2 m. Bagian atas adalah prisma segitiga dengan tinggi prisma 5 m serta penampang segitiga beralas 4 m dan tinggi 1 m. Kedua bagian tanpa sekat. Kapasitas yang diperlukan minimal 46 m³.</p></div>
+        <div class="stage"><span class="stage-name">2. Explore and Plan — Mengeksplorasi dan Merencanakan</span><p>Untuk memperoleh kapasitas total, saya menghitung ruang pada bagian bawah dan bagian atas secara terpisah. Bagian atas harus memakai luas segitiga sebagai luas alas prisma. Setelah itu kedua volume dijumlahkan karena air dapat mengisi kedua bagian.</p></div>
+        <div class="stage"><span class="stage-name">3. Select a Strategy — Memilih Strategi</span><p>Hitung volume balok dengan perkalian tiga dimensinya. Hitung luas segitiga dengan setengah kali alas kali tinggi segitiga, lalu kalikan dengan tinggi prisma. Jumlahkan kedua volume dan bandingkan hasilnya dengan 46 m³.</p></div>
+        <div class="stage"><span class="stage-name">4. Find an Answer — Menemukan Jawaban</span>
+          <p>Bagian bawah:</p><div class="calc">\[V_1=5\times4\times2=40\text{ m}^3\]</div>
+          <p>Luas penampang segitiga:</p><div class="calc">\[A=\frac12\times4\times1=2\text{ m}^2\]</div>
+          <p>Bagian atas:</p><div class="calc">\[V_2=2\times5=10\text{ m}^3\]</div>
+          <p>Volume total:</p><div class="calc">\[V=V_1+V_2=40+10=50\text{ m}^3\]</div>
+        </div>
+        <div class="stage"><span class="stage-name">5. Reflect and Extend — Meninjau Kembali dan Mengembangkan</span><p>Hasil 50 m³ lebih besar daripada kebutuhan 46 m³, sehingga tangki memenuhi syarat. Kelebihan kapasitasnya \(50-46=4\text{ m}^3\). Pemeriksaan juga sesuai dengan bentuk tangki: volume bagian balok dan prisma dijumlahkan, bukan dikurangkan, karena keduanya merupakan ruang yang dapat diisi air dan tidak dipisahkan sekat.</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+</html>
